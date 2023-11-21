@@ -21,6 +21,14 @@
 .button_card{
   background-color: rgb(97, 224, 97);
 }
+.card_div{
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.card_div:hover {
+  transform: translateY(-15px);
+  
+}
 /* .main_div{
   background-color: rgb(229, 226, 226);
 } */

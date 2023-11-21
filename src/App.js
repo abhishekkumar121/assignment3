@@ -5,6 +5,7 @@ import "./App.css";
 const UserCard = ({ user, onAddToTeam }) => {
   return (
     <div
+      className="card_div"
       style={{
         border: "1px solid #ccc",
         padding: "10px",
