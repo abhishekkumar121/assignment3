@@ -64,7 +64,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           onClick={() => onPageChange(page)}
           style={{
             margin: "5px",
-            padding: "5px",
+            padding: "1px",
             cursor: "pointer",
             backgroundColor: currentPage === page ? "#ddd" : "#fff",
           }}
