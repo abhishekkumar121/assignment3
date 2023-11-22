@@ -93,7 +93,16 @@ const App = () => {
     )
     .filter((user) => (domainFilter ? user.domain === domainFilter : true))
     .filter((user) => (genderFilter ? user.gender === genderFilter : true))
-    .filter((user) => (availabilityFilter ? user.available : true));
+    // .filter((user) => (availabilityFilter ? user.available : true));
+    .filter((user) => {
+      if (availabilityFilter === "true") {
+        return user.available;
+      } else if (availabilityFilter === "false") {
+        return !user.available;
+      } else {
+        return true;
+      }
+    });
 
   const currentUsers = filteredUsers.slice(indexOfFirstUser, indexOfLastUser);
   const totalPages = Math.ceil(filteredUsers.length / usersPerPage);
